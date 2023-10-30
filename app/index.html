@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello BookWorld</title>
+    <link rel="stylesheet" href="/styles.css">
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Add jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Add Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body style="background-color:beige;">
+    <h1>Best Books of 2023</h1>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <a href="https://www.goodreads.com/book/show/61431922-fourth-wing">
+                <img src="img/forthwing.jpg" alt="No.1">
+            </a>
+          </div>
+      
+          <div class="item">
+            <a href="https://www.goodreads.com/book/show/61718053-happy-place">
+                <img src="img/happyplace.jpg" alt="No.2">
+            </a>         
+          </div>
+      
+          <div class="item">
+            <a href="https://www.goodreads.com/book/show/59357120-yellowface">
+                <img src="img/yellowface.jpg" alt="No.3">
+            </a>
+          </div>
+        </div>
+      
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+    <div id="question", class="input_data">
+
+        <h1>What's Your Favorite Book?</h1>
+        <form action="/favorite_book" method="post">
+            <label for="title">Book Title:</label>
+            <input type="text" id="title" name="title" required><br><br>
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <br>
+        <!-- <button onclick="window.location.href='/books'">View All Book Recommendations</button>  -->
+
+        <button onclick="loadBooks()">View All Book Recommendations</button>
+        <div id="bookList"></div>
+    </div>
+
+ 
+
+
+    <script src="/scripts.js"></script>
+
+</body>
+</html>
